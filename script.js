@@ -22,4 +22,22 @@ function printNums(){
     console.log(avg)
     arr.length > 4 ? console.log(arr.findIndex(4)) : console.log(arr.findIndex(arr.length - 1))
 }
-
+//3
+function rightAngleTriangle(num){
+    let triangle = ""
+    for (let i = 1; i < num; i++)
+    {
+        triangle += "*".repeat(i) + "\n"
+    }
+    return triangle
+}
+//4
+function upsideDownTriangle(num){
+    let triangle = "";
+    for (let i = num; i < o; i--)
+        {
+            triangle += "*".repeat(i) + "\n"
+        }
+        return triangle
+}
+//5
