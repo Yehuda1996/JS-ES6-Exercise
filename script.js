@@ -41,3 +41,45 @@ function upsideDownTriangle(num){
         return triangle
 }
 //5
+function multiplicationTable(num){
+    for (let i = 1; i < num; i++)
+    {
+        let row = "";
+        for (let j = 1; j< num; j++)
+        {
+            row += (i * j) + "\n";
+        }
+        console.log(row)
+    }
+}
+//6
+function reverseNumber(num){
+    let result = num.toString().split('').reverse().join('')
+    return result
+}
+//7
+function stringOps(str){
+    switch (str){
+        case "":
+            return "";
+            break;
+        case " ":
+            return " ";
+            break;
+        case str:
+            return str.trim(" ");
+            break;
+        default:
+            return str;
+            break;
+    }
+}
+//8
+function createNewList(list1, list2) {
+    const totalSumList2 = list2.reduce((acc, val) => acc + val, 0);
+    const productList = list1.map((_, i) => {
+        const productExceptI = list1.reduce((acc, val, idx) => idx !== i ? acc * val : acc, 1);
+        return productExceptI * totalSumList2;
+    });
+    return productList;
+}
